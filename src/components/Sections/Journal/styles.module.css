@@ -1,0 +1,121 @@
+/* Animation for fade in effect */
+@keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .animate-fadeIn {
+    animation: fadeIn 0.5s ease-out forwards;
+  }
+  
+  /* Placeholder animation for text input */
+  @keyframes typingPlaceholder {
+    0%, 100% {
+      content: "Start writing your thoughts...";
+    }
+    25% {
+      content: "How are you feeling today?";
+    }
+    50% {
+      content: "What's on your mind?";
+    }
+    75% {
+      content: "Express yourself freely...";
+    }
+  }
+  
+  .journal-textarea::placeholder {
+    animation: typingPlaceholder 15s infinite;
+  }
+  
+  /* Custom scrollbar for journal entries */
+  .entries-container {
+    scrollbar-width: thin;
+    scrollbar-color: #cbd5e0 #f7fafc;
+  }
+  
+  .entries-container::-webkit-scrollbar {
+    width: 6px;
+  }
+  
+  .entries-container::-webkit-scrollbar-track {
+    background: #f7fafc;
+  }
+  
+  .entries-container::-webkit-scrollbar-thumb {
+    background-color: #cbd5e0;
+    border-radius: 3px;
+  }
+  
+  /* Card hover effects */
+  .entry-card {
+    transition: all 0.2s ease;
+  }
+  
+  .entry-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  }
+  
+  /* Mood icons emphasis */
+  .mood-icon {
+    transition: transform 0.2s ease;
+  }
+  
+  .mood-icon:hover {
+    transform: scale(1.2);
+  }
+  
+  /* Tags styling */
+  .tag {
+    background-color: #ebf4ff;
+    color: #3182ce;
+    padding: 0.25rem 0.75rem;
+    border-radius: 9999px;
+    font-size: 0.75rem;
+    display: inline-flex;
+    align-items: center;
+    margin-right: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .tag-icon {
+    margin-right: 0.25rem;
+  }
+  
+  /* Journal entry text area focus */
+  .journal-textarea:focus {
+    box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.5);
+    border-color: #3182ce;
+    outline: none;
+  }
+  
+  /* Journal history empty state */
+  .empty-state {
+    text-align: center;
+    padding: 3rem 0;
+  }
+  
+  .empty-state-icon {
+    width: 48px;
+    height: 48px;
+    margin: 0 auto 1rem;
+    color: #a0aec0;
+    opacity: 0.5;
+  }
+  
+  .empty-state-text {
+    color: #718096;
+    font-size: 1rem;
+  }
+  
+  .empty-state-subtext {
+    color: #a0aec0;
+    font-size: 0.875rem;
+  }

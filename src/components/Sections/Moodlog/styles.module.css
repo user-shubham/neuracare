@@ -1,0 +1,305 @@
+/* src/components/Sections/MoodLog/styles.module.css */
+
+.moodLogSection {
+    padding: 2rem 1rem;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  
+  .sectionHeader {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  .sectionTitle {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: #333;
+  }
+  
+  .sectionSubtitle {
+    font-size: 1.1rem;
+    color: #666;
+  }
+  
+  /* Mood Selector Styles */
+  .moodSelectorContainer {
+    margin-bottom: 2rem;
+  }
+  
+  .moodGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    gap: 1rem;
+    margin-bottom: 2rem;
+  }
+  
+  .moodButton {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    border-radius: 12px;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .moodButton:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  }
+  
+  .moodEmoji {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .moodName {
+    font-size: 0.9rem;
+    font-weight: 500;
+  }
+  
+  /* Popup Styles */
+  .popupOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .popupContent {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 12px;
+    width: 90%;
+    max-width: 500px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  }
+  
+  .popupTitle {
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .popupEmoji {
+    font-size: 2rem;
+    margin-right: 0.75rem;
+  }
+  
+  .formGroup {
+    margin-bottom: 1.5rem;
+  }
+  
+  .label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    color: #555;
+  }
+  
+  .intensitySlider {
+    width: 100%;
+    height: 8px;
+    -webkit-appearance: none;
+    background: #e0e0e0;
+    border-radius: 4px;
+    outline: none;
+  }
+  
+  .intensitySlider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #4C6FFF;
+    cursor: pointer;
+  }
+  
+  .journalInput {
+    width: 100%;
+    min-height: 120px;
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    resize: vertical;
+    font-family: inherit;
+  }
+  
+  .buttonGroup {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+  }
+  
+  .cancelButton {
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 6px;
+    background-color: #f0f0f0;
+    color: #555;
+    font-weight: 500;
+    cursor: pointer;
+  }
+  
+  .saveButton {
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 6px;
+    background-color: #4C6FFF;
+    color: white;
+    font-weight: 500;
+    cursor: pointer;
+  }
+  
+  /* Timeline Styles */
+  .timelineContainer {
+    margin-top: 3rem;
+  }
+  
+  .timelineTitle {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #333;
+  }
+  
+  .timelineWrapper {
+    position: relative;
+  }
+  
+  .timelineScroll {
+    display: flex;
+    overflow-x: auto;
+    gap: 1rem;
+    padding: 1rem 0.5rem;
+    scrollbar-width: thin;
+    -ms-overflow-style: none;
+    scroll-behavior: smooth;
+  }
+  
+  .timelineScroll::-webkit-scrollbar {
+    height: 4px;
+  }
+  
+  .timelineScroll::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+  }
+  
+  .moodCard {
+    flex: 0 0 300px;
+    padding: 1rem;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .moodCardHeader {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.5rem;
+  }
+  
+  .moodName {
+    font-weight: 600;
+    margin: 0 0.5rem;
+  }
+  
+  .moodIntensity {
+    color: #777;
+    font-size: 0.8rem;
+  }
+  
+  .moodTime {
+    font-size: 0.8rem;
+    color: #777;
+    margin-bottom: 0.75rem;
+  }
+  
+  .journalPreview {
+    font-size: 0.9rem;
+    color: #555;
+    line-height: 1.4;
+  }
+  
+  .emptyMessage {
+    font-style: italic;
+    color: #777;
+    text-align: center;
+    width: 100%;
+  }
+  
+  .scrollButton {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: white;
+    border: 1px solid #eee;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    cursor: pointer;
+    z-index: 5;
+  }
+  
+  .leftButton {
+    left: 0;
+  }
+  
+  .rightButton {
+    right: 0;
+  }
+  
+  /* Responsive Adjustments */
+  @media (max-width: 768px) {
+    .moodGrid {
+      grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+    }
+    
+    .moodEmoji {
+      font-size: 1.75rem;
+    }
+    
+    .popupContent {
+      padding: 1.5rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .moodGrid {
+      grid-template-columns: repeat(auto-fill, minmax(70px, 1fr));
+      gap: 0.75rem;
+    }
+    
+    .moodEmoji {
+      font-size: 1.5rem;
+    }
+    
+    .moodName {
+      font-size: 0.8rem;
+    }
+    
+    .buttonGroup {
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+    
+    .cancelButton, .saveButton {
+      width: 100%;
+    }
+  }
